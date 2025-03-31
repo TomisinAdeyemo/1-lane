@@ -1,0 +1,586 @@
+@import url('https://fonts.cdnfonts.com/css/micromieps-phat');
+@import url(https://db.onlinewebfonts.com/c/38ca91756f261b513c455c73f65ea276?family=Nohemi+ExtLt);
+@import url(https://db.onlinewebfonts.com/c/2acd1ac6664b7b1a1545cc36d0680783?family=Nohemi+SemBd);
+@import url(https://db.onlinewebfonts.com/c/340730b16e1fc32fe6c5e2ce1d020a54?family=Nohemi+Med);
+@import url(https://db.onlinewebfonts.com/c/29ddb4605533a38e086b48fa105e0d12?family=Nohemi);
+@import url('https://fonts.cdnfonts.com/css/akira-expanded');
+@import url('https://fonts.cdnfonts.com/css/kermesse');
+@import url('https://fonts.cdnfonts.com/css/unbounded');
+@import url(https://db.onlinewebfonts.com/c/38ca91756f261b513c455c73f65ea276?family=Nohemi+ExtLt);
+@import url(https://db.onlinewebfonts.com/c/2acd1ac6664b7b1a1545cc36d0680783?family=Nohemi+SemBd);
+@import url(https://db.onlinewebfonts.com/c/340730b16e1fc32fe6c5e2ce1d020a54?family=Nohemi+Med);
+@import url(https://db.onlinewebfonts.com/c/29ddb4605533a38e086b48fa105e0d12?family=Nohemi);
+@import url('https://fonts.cdnfonts.com/css/inter');
+@import url('https://fonts.cdnfonts.com/css/roboto-condensed');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    position: relative;
+    width: 100%;
+    height: 105vh;
+    text-align: center;
+    font-size: 12px;
+    background: rgba(0, 0, 0, 1); /* Semi-transparent black */
+    backdrop-filter: blur(50px); /* Blurs everything behind */
+}
+
+/* Loader */
+#loader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+#loader img {
+    width: 150px; 
+    animation: spin 3s linear infinite; 
+}
+
+/* Spinning Animation */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Hide content until loaded */
+.hidden {
+    display: none;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: rgba(0, 0, 0, 1); /* Semi-transparent black */
+    backdrop-filter: blur(50px); /* Blurs everything behind */
+    color: white;
+    position: relative;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.logo img {
+    height: 85px; /* Adjust size */
+}
+
+/* Navbar Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+   
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 10px;
+    font-family: 'MicroMieps Phat', sans-serif;
+    cursor: pointer;
+}
+
+.nav-links a:hover {
+    color: #BFACEE;
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-toggle img {
+    height: 30px;
+    width: 30px;
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* Text Slideshow */
+.text-slideshow {
+    overflow: hidden;
+    white-space: nowrap;
+    background: transparent;
+    padding: 10px 0;
+    display: flex;
+}
+
+.scrolling-text {
+    display: flex;
+    white-space: nowrap;
+    animation: scrollText 35s linear infinite;
+}
+
+.scrolling-text span {
+    font-family: 'MicroMieps Phat', sans-serif;
+    font-size: 20px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-right: 50px;
+}
+
+/* Marquee Animation */
+@keyframes scrollText {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .logo img {
+        height: 75px; /* Adjust size */
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        background: transparent;
+        color: white;
+        position: relative;
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+     /* Responsive Text Slideshow */
+     .scrolling-text span {
+        font-size: 16px; /* Smaller text for mobile */
+    }
+
+    @keyframes scrollText {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(-100%);
+        }
+    }
+
+    .hero {
+        font-size: 14px !important;
+    }
+    
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    font-family: 'Unbounded', sans-serif;
+    font-size: 25px;
+}
+
+/* Footer */
+footer {
+    font-family: 'MicroMieps Phat', sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    color: white;
+    padding: 10px;
+    position: relative;
+    border-top: 40px;
+    width: 100%;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slideshow-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.content h1, .content h2, .content h3 {
+    margin-bottom: 10px;
+    margin-right: 90px;
+}
+
+.content h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    letter-spacing: .02em;
+    font-size: 14px;
+}
+
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+}
+
+.cta-button {
+    text-decoration: none;
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 14px;
+    color: white;
+    background: black;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    background-color: black;
+}
+
+.what-we-do {
+    padding: 50px 10%;
+    background: black;
+}
+.what-we-do h1 {
+    font-size: 60px;
+    color: white;
+    margin-bottom: 20px;
+    margin-right: 1200px;
+}
+
+.what-we-do h3 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+    letter-spacing: .02em;
+    line-height: 1.5rem;
+    margin-top: .5rem;
+}
+.service-boxes {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.service-box {
+    flex: 1;
+    min-width: 250px;
+    background: transparent;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    border-color: #fff;
+}
+.service-box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.service-box:hover {
+    transform: scale(1.05);
+}
+@media (max-width: 768px) {
+    .what-we-do h1 {
+        font-size: 30px;
+        color: white;
+        margin-bottom: 20px;
+        margin-right: 1000px;
+    }
+
+    .service-boxes {
+        flex-direction: column;
+    }
+    .content {
+        left: 5%;
+        width: 90%;
+        text-align: center;
+    }
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    max-width: 1200px;
+    margin: auto;
+}
+.section h1 {
+    flex: 1;
+    font-size: 40px;
+}
+.circles-container {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+    justify-content: center;
+}
+.circle-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    transition: 0.3s;
+}
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.circle:hover {
+    filter: brightness(0.5);
+}
+.circle:hover .hover-text {
+    opacity: 1;
+}
+.hover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    opacity: 0;
+    transition: 0.3s;
+}
+.btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .circles-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+.shop-merch {
+    background-image: url('./0C0A5597.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 10%;
+    color: white;
+    height: 90vh;
+    text-align: left;
+    position: relative;
+}
+.shop-merch::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+.shop-content {
+    position: relative;
+    z-index: 1;
+}
+.shop-content h1 {
+    font-size: 78px;
+    margin-bottom: 20px;
+}
+.shop-content button {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    background: black;
+    border-color: #fff;
+    color: white;
+    border-radius: 14px;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .shop-content h1 {
+        font-size: 42px;
+    }
+    .shop-content button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
+
+.footer {
+    font-family: "Nohemi SemBd";
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 10%;
+    flex-wrap: wrap;
+}
+.footer img {
+    width: 80px;
+    height: auto;
+}
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+.footer-column h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.footer-column ul {
+    list-style: none;
+}
+.footer-column ul li {
+    font-family: "Nohemi";
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-column {
+        margin-bottom: 30px;
+    }
+}
+
+.newsletter button {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.newsletter button:hover {
+    color: black;
+    background-color: #fff;
+}
+.secondary-footer {
+    font-family: 'Roboto Condensed Light', sans-serif;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    flex-wrap: wrap;
+    border-top: 1px solid white;
+}
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+.social-links a {
+    color: white;
+    text-decoration: none;
+}
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-column {
+        margin-bottom: 30px;
+    }
+    .newsletter {
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .secondary-footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
