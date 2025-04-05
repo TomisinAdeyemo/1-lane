@@ -1,310 +1,274 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1lane</title>
-    <link rel="icon" type="image/png" href="./logo.jpg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.cdnfonts.com/css/roboto-condensed" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
-</head>
-<body>
- <!-- Loader Screen -->
- <div id="loader">
-    <img src="./1LaNe99jpg.jpg" alt="Loading..."> 
-</div>
+@import url('https://fonts.cdnfonts.com/css/micromieps-phat');
+@import url(https://db.onlinewebfonts.com/c/38ca91756f261b513c455c73f65ea276?family=Nohemi+ExtLt);
+@import url(https://db.onlinewebfonts.com/c/2acd1ac6664b7b1a1545cc36d0680783?family=Nohemi+SemBd);
+@import url(https://db.onlinewebfonts.com/c/340730b16e1fc32fe6c5e2ce1d020a54?family=Nohemi+Med);
+@import url(https://db.onlinewebfonts.com/c/29ddb4605533a38e086b48fa105e0d12?family=Nohemi);
+@import url('https://fonts.cdnfonts.com/css/akira-expanded');
+@import url('https://fonts.cdnfonts.com/css/kermesse');
+@import url('https://fonts.cdnfonts.com/css/unbounded');
 
-<!-- Main Content -->
-<div id="content" class="hidden">
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <nav class="navbar">
-            <div class="logo">
-                <img src="./mainlogo01.png" alt="Logo">
-            </div>
-            <div class="menu-toggle" onclick="toggleMenu()">
-                <i class="fas fa-bars"></i>
-            </div>
-            <ul class="nav-links" id="mobileMenu">
-                <li><a href="./index.html">HOME</a></li>
-                <li><a href="./about-us.html">ABOUT 1LANE</a></li>
-                <li><a href="#">REACH</a></li>
-            </ul>
-        </nav>
-
-        <div class="slideshow-container">
-            <div class="slide fade" style="background-image: url('./Zichy\ .jpg');">
-                <div class="content">
-                   <h1 style="font-family: 'MicroMieps Phat', serif; font-size: 18px; font-weight: bold;"> 1 Lift artists 'N' empower</h1>
-                    <h2>Zichy</h2>
-                    <h3>Zichy is a gifted artist whose music embodies love, struggle, and bliss.<br> 
-                        His deeply personal storytelling and melodic mastery captivate listeners across the globe.</h3>
-                    <a href="https://music.apple.com/ng/artist/wahab/1524152508" target="_blank" class="cta-button">
-                        <i class="fa-brands fa-apple"></i> Listen on Apple Music
-                    </a>
-                </div>
-            </div>
-
-            <div class="slide fade" style="background-image: url('./Kaey.jpg');">
-                <div class="content">
-                   <h1 style="font-family: 'MicroMieps Phat', serif; font-size: 18px; font-weight: bold;">
-  1 Lift artists 'N' empower
-</h1>
-
-                    <h2>Kaey</h2>
-                    <h3>Kaey is a dynamic artist known for her genre-blending sound, <br>powerful vocals, and authentic storytelling, 
-                        capturing raw emotion through <br>every lyric and melody she creates.</h3>
-                    <a href="https://music.apple.com/ng/artist/joe-c/1609279957" target="_blank" class="cta-button">
-                        <i class="fa-brands fa-apple"></i> Listen on Apple Music
-                    </a>
-                </div>
-            </div>
-
-
-            <div class="slide fade" style="background-image: url('./PrayzzZ\ .jpg');">
-                <div class="content">
-                   <h1 style="font-family: 'MicroMieps Phat', serif; font-size: 18px; font-weight: bold;">
-  1 Lift artists 'N' empower
-</h1>
-
-                    <h2>PrayzzZ</h2>
-                    <h3>PrayzzZ is a versatile artist with a soul-stirring sound, blending Afrobeat, <br> R&B, Jazz and Hip-Hop 
-                        influences to create music that resonates deeply with diverse audiences.</h3>
-                    <a href="https://music.apple.com/ng/artist/prayzzz/1415098559" target="_blank" class="cta-button">
-                        <i class="fa-brands fa-apple"></i> Listen on Apple Music
-                    </a>
-                </div>
-            </div>
-
-            <div class="slide fade" style="background-image: url('./Stovia\ .jpg');">
-                <div class="content">
-                   <h1 style="font-family: 'MicroMieps Phat', serif; font-size: 18px; font-weight: bold;">
-  1 Lift artists 'N' empower
-</h1>
-
-                    <h2>Stovia</h2>
-                    <h3>Stovia is a rising star blending Afro-soul, R&B, and Afrobeats with irresistible charm. 
-                        <br>Inspired by legends like Nina Simone, she crafts timeless sounds that captivate and inspire.</h3>
-                    <a href="https://music.apple.com/ng/artist/stovia/1650194850" target="_blank" class="cta-button">
-                        <i class="fa-brands fa-apple"></i> Listen on Apple Music
-                    </a>
-                </div>
-            </div>
-
-            <div class="slide fade" style="background-image: url('./Joe\ C.jpg');">
-                <div class="content">
-                   <h1 style="font-family: 'MicroMieps Phat', serif; font-size: 18px; font-weight: bold;">
-  1 Lift artists 'N' empower
-</h1>
-
-                    <h2>Joe C</h2>
-                    <h3>Joe C (Court Joseph) is a Nigerian artist, singer, and songwriter known <br>for blending Afrobeats and Afrosoul. 
-                        His music stands out with powerful vocals. <br>With a unique sound, 
-                        he continues to make a mark in the industry, <br>creating music that deeply resonates with listeners.</h3>
-                    <a href="https://music.apple.com/ng/artist/joe-c/1609279957" target="_blank" class="cta-button">
-                        <i class="fa-brands fa-apple"></i> Listen on Apple Music
-                    </a>
-                </div>
-            </div>
-
-
-            <div class="slide fade" style="background-image: url('./Artist\ Spotlight\ 1.JPG');">
-                <div class="content">
-                   <h1 style="font-family: 'MicroMieps Phat', serif; font-size: 18px; font-weight: bold;">
-  1 Lift artists 'N' empower
-</h1>
-
-                    <h2>Wahab</h2>
-                    <h3>Wahab is a dynamic artist blending Afro-fusion with soulful storytelling. With a sound that resonates 
-                        <br>deeply, he crafts music that connects emotions, culture, and rhythm. <br>Driven by passion and authenticity, 
-                        Wahab is carving his own lane in the <br>industry, delivering melodies that leave a lasting impact.</h3>
-                    <a href="https://music.apple.com/ng/artist/wahab/1524152508" target="_blank" class="cta-button">
-                        <i class="fa-brands fa-apple"></i> Listen on Apple Music
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="what-we-do">
-        <div class="container">
-            <h1 class="responsive-heading">What we do?</h1>
-            <div class="service-boxes">
-                <div class="service-box">
-                    <img src="./Artist Representation.jpg" alt="Service 1">
-                    <h2>Artist Services</h2>
-                    <h3>We offer comprehensive management services, from career development <br>through holistic artist development to 
-                        marketing strategies <br>, ensuring our artists shine in the spotlight.</h3>
-                </div>
-                <div class="service-box">
-                    <img src="./Athlete representation.JPG" alt="Service 2">
-                    <h2>Athlete Representation</h2>
-                    <h3>Our team is dedicated to maximizing the potential of athletes, <br>
-                        providing guidance, sponsorship negotiation, and brand development.</h3>
-                </div>
-                <div class="service-box">
-                    <img src="./Merch slider.jpeg" alt="Service 3">
-                    <h2>Merchandise Development</h2>
-                    <h3>Merchandise Development 1LaNe specializes in creating and promoting merchandise that resonates with fans while enhancing 
-                        brand visibility. Through its subsidiary, Wornlane, the company designs and produces high-quality sportswear that 
-                        seamlessly blends style, functionality, and identity.</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-<!--TEAM SECTION-->
-    <div class="section">
-        <h1>Next-N-Line</h1>
-        <div class="circles-container">
-            <div class="circle-wrapper">
-                <div class="circle">
-                    <img src="./Artist Spotlight 1.JPG" alt="Image 1">
-                    <div class="hover-text">Wahab</div>
-                </div>
-                <a href="https://music.apple.com/ng/artist/wahab/1524152508" class="btn">Listen on Apple Music</a>
-            </div>
-            <div class="circle-wrapper">
-                <div class="circle">
-                    <img src="./Artist Spotlight 2.jpg" alt="Image 2">
-                    <div class="hover-text">Wonu</div>
-                </div>
-                <a href="your-link-here" class="btn">Listen on Apple Music</a>
-            </div>
-        </div>
-    </div>
-
-    <section class="new-section">
-        <h1 class="section-title">THE LATEST</h1>
-        
-        <div class="boxes-container">
-          <div class="box">
-            <img src="./IMG_8DA612C818CF-1.jpeg" alt="Box 1">
-            <div class="box-content">
-              <p>MUSIC</p>
-              <span class="arrow">&#8594;</span>
-            </div>
-          </div>
-          
-          <div class="box">
-            <img src="./manchester-united-team-250216g1200.jpeg" alt="Box 2">
-            <div class="box-content">
-              <p>SPORTS</p>
-              <span class="arrow">&#8594;</span>
-            </div>
-          </div>
-          
-          <div class="box">
-            <img src="./Snapinsta.app_483634969_18444204076074590_7467653109391155326_n_1080.jpg" alt="Box 3">
-            <div class="box-content">
-              <p>FASHION</p>
-              <span class="arrow">&#8594;</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="center-button-section">
-        <button class="center-button">Submit Songs</button>
-      </section>
-      
-
-
-<!--MERCHENDISE-->
-
-    <section class="shop-merch">
-        <div class="shop-content">
-            <h1 style="font-family: 'MicroMieps Phat', serif; font-size: 18px; font-weight: bold;">Shop wornlane <br>
-                Merchandise</h1>
-                <a href="./about us.html" target="_blank" class="cta-button">
-                    <i class=""></i>Visit Site</a>                
-        </div>
-    </section>
-    
-
-    
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-column">
-            <img src="./1LaNe99jpg.jpg" alt="Company Logo" style="width: 150px; height: auto;">
-        </div>
-        <div class="footer-column">
-            <h2>Product</h2>
-            <ul>
-                <li>Artist Services</li>
-                <li>Athlete Representation</li>
-                <li>Merchandise Development</li>
-            </ul>
-        </div>
-        <div class="footer-column">
-            <h2>Company</h2>
-            <ul>
-                <li>About Us</li>
-                <li>Career</li>
-                <li>Contact Us</li>
-            </ul>
-        </div>
-    </footer>
-
-    <footer class="secondary-footer">
-        <div class="copyright">&copy; 2025 1Lane. All rights reserved.</div>
-        <div class="social-links">
-            <a href="#">Twitter</a>
-            <a href="#">Instagram</a>
-            <a href="#">Facebook</a>
-        </div>
-        <div class="newsletter">
-            <button>Sign Up to Newsletter</button>
-        </div>
-    </footer>
-
-    <script>
-        function toggleMenu() {
-    var menu = document.getElementById("mobileMenu");
-    menu.classList.toggle("active");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+body {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    font-size: 12px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    will-change: background-image;
+    animation: backgroundSlideshow 8s infinite alternate;
 }
 
-// Close menu when clicking outside
-document.addEventListener("click", function(event) {
-    var menu = document.getElementById("mobileMenu");
-    var toggleButton = document.querySelector(".menu-toggle img");
+/* Preload first image to prevent blank background */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)), url('./0C0A5577.png');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
 
-    if (!menu.contains(event.target) && !toggleButton.contains(event.target)) {
-        menu.classList.remove("active");
+/* Keyframes for background slideshow */
+@keyframes backgroundSlideshow {
+    0% {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)), url('./0C0A5577.png');
     }
-});
+    50% {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)), url('./0C0A5597.png');
+    }
+    100% {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)), url('./0C0A5577.png');
+    }
+}
 
-    </script>
+/* Mobile Optimization */
+@media screen and (max-width: 768px) {
+    body {
+        background-size: contain;
+        animation: none; /* Disable animation on mobile for faster loading */
+    }
+}
 
 
 
-    <script>
-            let slideIndex = 0;
-        
-            function showSlides() {
-                let slides = document.querySelectorAll(".slide");
-                slides.forEach(slide => slide.style.opacity = "0");
-        
-                slideIndex++;
-                if (slideIndex > slides.length) { slideIndex = 1; }
-        
-                slides[slideIndex - 1].style.opacity = "1";
-                setTimeout(showSlides, 5000); // Change slide every 5 seconds
-            }
-        
-            window.onload = function () {
-                // Loader fade
-                setTimeout(() => {
-                    document.getElementById("loader").style.display = "none";
-                    document.getElementById("content").classList.remove("hidden");
-                    showSlides(); // Start slideshow after load
-                }, 2000);
-            };
-        </script>
+/* Loader */
+#loader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
 
-</body>
-</html>
+#loader img {
+    width: 150px; 
+    animation: spin 3s linear infinite; 
+}
+
+/* Spinning Animation */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Hide content until loaded */
+.hidden {
+    display: none;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: transparent;
+    color: white;
+    position: relative;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.logo img {
+    height: 85px; /* Adjust size */
+}
+
+/* Navbar Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+   
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: 'MicroMieps Phat', sans-serif;
+    cursor: pointer;
+}
+
+.nav-links a:hover {
+    color: black;
+    transition: .5s;
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-toggle img {
+    height: 30px;
+    width: 30px;
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* Text Slideshow */
+.text-slideshow {
+    overflow: hidden;
+    white-space: nowrap;
+    background: transparent;
+    padding: 10px 0;
+    display: flex;
+}
+
+.scrolling-text {
+    display: flex;
+    white-space: nowrap;
+    animation: scrollText 35s linear infinite;
+}
+
+.scrolling-text span {
+    font-family: 'MicroMieps Phat', sans-serif;
+    font-size: 20px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-right: 50px;
+}
+
+/* Marquee Animation */
+@keyframes scrollText {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .logo img {
+        height: 75px; /* Adjust size */
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        background: transparent;
+        color: white;
+        position: relative;
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+     /* Responsive Text Slideshow */
+     .scrolling-text span {
+        font-size: 16px; /* Smaller text for mobile */
+        animation-duration: 2s;
+    }
+
+    @keyframes scrollText {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(-100%);
+        }
+    }
+
+    .hero {
+        font-size: 14px !important;
+    }
+    
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    font-family: 'Unbounded', sans-serif;
+    font-size: 25px;
+}
+
+/* Footer */
+footer {
+    font-family: 'MicroMieps Phat', sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    color: white;
+    padding: 10px;
+    position: relative;
+    border-top: 40px;
+    width: 100%;
+}
+
+.about-worn {
+    font-size: 16px;
+    line-height: 25px;
+}
