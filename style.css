@@ -73,7 +73,7 @@ body {
 
 /* Adjusting Logo Size Dynamically */
 .logo img {
-    height: 20px; /* Default for desktop */
+    height: 40px; /* Default for desktop */
 }
 
 /* Menu Icon */
@@ -140,9 +140,8 @@ body {
             display: none;
             flex-direction: column;
             position: absolute;
-            top: 60px;
+            top: 100px;
             right: 0;
-            background: rgba(0, 0, 0, 0.8);
             width: 200px;
             padding: 15px;
         }
@@ -199,6 +198,16 @@ footer {
     position: relative;
     border-top: 40px;
     width: 100%;
+}
+
+h2 {
+    font-family: 'MicroMieps Phat', sans-serif;
+    font-size: 14px;
+}
+
+.responsive-heading {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 900;
 }
 
 .hero {
@@ -402,10 +411,15 @@ footer {
     height: 200px;
     object-fit: cover;
     border-radius: 5px;
+    transition: filter 0.3s ease, transform 0.3s ease;
 }
-.service-box:hover {
-    transform: scale(1.05);
+
+/* Dimming effect on hover */
+.service-box:hover img {
+    filter: brightness(60%);
+    transform: scale(1.02); /* optional for a little zoom */
 }
+
 @media (max-width: 768px) {
     .what-we-do h1 {
         font-size: 30px;
