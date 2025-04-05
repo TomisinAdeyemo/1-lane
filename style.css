@@ -500,32 +500,76 @@ footer {
 
 
 .shop-merch {
-    background-image: url('./0C0A5597.jpg');
-    background-size: cover;
-    background-position: center;
+    position: relative;
+    width: 100%;
+    height: 90vh;
     padding: 100px 10%;
     color: white;
-    height: 90vh;
     text-align: left;
-    position: relative;
+    overflow: hidden;
 }
-.shop-merch::before {
+
+/* Two background layers for slideshow */
+.shop-merch::before,
+.shop-merch::after {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: fadeSlideshow 10s infinite ease-in-out;
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
+
+.shop-merch::before {
+    background-image: url('./0C0A5597.jpg'); /* First image */
+    animation-delay: 0s;
+    z-index: 0;
+}
+
+.shop-merch::after {
+    background-image: url('./1LaNe\ shoot\ 5.jpg'); /* Replace with your second image */
+    animation-delay: 5s;
+    z-index: 0;
+}
+
+/* Dark overlay layer */
+.shop-merch::after,
+.shop-merch::before {
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+}
+
+/* Animation keyframes */
+@keyframes fadeSlideshow {
+    0%, 45% {
+        opacity: 1;
+    }
+    50%, 95% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Content styling */
 .shop-content {
     position: relative;
     z-index: 1;
 }
+
 .shop-content h1 {
     font-size: 78px;
     margin-bottom: 20px;
+    font-family: 'MicroMieps Phat', serif;
 }
+
 .shop-content button {
     padding: 10px 20px;
     font-size: 18px;
@@ -536,15 +580,18 @@ footer {
     border-radius: 14px;
     cursor: pointer;
 }
+
 @media (max-width: 768px) {
     .shop-content h1 {
         font-size: 42px;
     }
+
     .shop-content button {
         font-size: 16px;
         padding: 8px 16px;
     }
 }
+
 
 .footer {
     font-family: "Nohemi SemBd";
