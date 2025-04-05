@@ -716,12 +716,13 @@ footer {
   }
   
   .center-button {
-    padding: 15px 30px;
-    font-size: 1.5rem;
+    padding: 10px 10px;
+    font-family: 'MicroMieps Phat', sans-serif;
+    font-size: 12px;
     font-weight: bold;
     background-color: #000; /* Blue background */
     color: white;
-    border: white;
+    border: 1px solid white;
     border-radius: 25px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -736,15 +737,15 @@ footer {
   /* Responsive Design */
   @media (max-width: 1024px) {
     .center-button {
-      font-size: 1.3rem;
-      padding: 12px 25px;
+      font-size: 10px;
+      padding: 12px 20px;
     }
   }
   
   @media (max-width: 768px) {
     .center-button {
-      font-size: 1.2rem;
-      padding: 10px 20px;
+      font-size: 10px;
+      padding: 10px 10px;
     }
   }
   
