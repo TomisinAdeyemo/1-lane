@@ -719,17 +719,18 @@ footer {
     padding: 15px 30px;
     font-size: 1.5rem;
     font-weight: bold;
-    background-color: #007bff; /* Blue background */
+    background-color: #000; /* Blue background */
     color: white;
-    border: none;
-    border-radius: 5px;
+    border: white;
+    border-radius: 25px;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
   
   /* Hover effect */
   .center-button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #fff;
+    color: black; 
   }
   
   /* Responsive Design */
