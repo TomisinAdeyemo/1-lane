@@ -222,8 +222,21 @@ footer {
     width: 100%;
     height: 100%;
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
     animation: fade 1s ease-in-out;
+  }
+
+  .slide::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%; /* Adjust height for more/less tint */
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
+    pointer-events: none;
+    z-index: 5;
   }
   
   .fade {
@@ -238,12 +251,11 @@ footer {
     text-align: center;
     color: white;
     max-width: 90%;
-    padding: 0; /* Removed padding */
-    background: none; /* Removed background */
-    border-radius: 0; /* Removed border radius */
+    padding: 0;
+    background: none;
+    border-radius: 0;
     z-index: 10;
   }
-
   
   .slide .content h1 {
     font-family: 'MicroMieps Phat', serif;
@@ -265,9 +277,9 @@ footer {
   }
   
   .cta-button {
-    font-size: 0.85rem; /* Smaller font size */
-    padding: 0.5rem 1rem; /* Reduced padding */
-    background: #ffffff20; /* Transparent light base */
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+    background: #ffffff20;
     color: white;
     border: 1px solid white;
     border-radius: 25px;
@@ -278,34 +290,71 @@ footer {
     gap: 8px;
   }
   
-  /* Gradient on hover */
   .cta-button:hover {
-    transform: scale(1.05); /* Slight zoom effect */
+    transform: scale(1.05);
     color: white;
     border-color: transparent;
   }
   
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    .slide .content h1 {
+      font-size: 2rem;
+    }
+  
+    .slide .content h2 {
+      font-size: 1.3rem;
+    }
+  
+    .slide .content h3 {
+      font-size: 0.95rem;
+    }
+  }
+  
   @media (max-width: 768px) {
+    .slideshow-container {
+      height: 90vh;
+    }
+  
     .slide .content {
       bottom: 5%;
       padding: 1rem;
     }
   
     .slide .content h1 {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
     }
   
     .slide .content h2 {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
   
     .slide .content h3 {
-      font-size: 0.95rem;
+      font-size: 0.9rem;
     }
   
     .cta-button {
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       padding: 0.6rem 1.2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .slide .content h1 {
+      font-size: 1.4rem;
+    }
+  
+    .slide .content h2 {
+      font-size: 1rem;
+    }
+  
+    .slide .content h3 {
+      font-size: 0.85rem;
+    }
+  
+    .cta-button {
+      font-size: 0.8rem;
+      padding: 0.5rem 1rem;
     }
   }
   
@@ -313,6 +362,7 @@ footer {
     from { opacity: 0; }
     to { opacity: 1; }
   }
+  
   
 
 .what-we-do {
