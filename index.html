@@ -1,310 +1,757 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1lane</title>
-    <link rel="icon" type="image/png" href="./logo.jpg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.cdnfonts.com/css/roboto-condensed" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
-</head>
-<body>
- <!-- Loader Screen -->
- <div id="loader">
-    <img src="./1LaNe99jpg.jpg" alt="Loading..."> 
-</div>
+@import url('https://fonts.cdnfonts.com/css/micromieps-phat');
+@import url(https://db.onlinewebfonts.com/c/38ca91756f261b513c455c73f65ea276?family=Nohemi+ExtLt);
+@import url(https://db.onlinewebfonts.com/c/2acd1ac6664b7b1a1545cc36d0680783?family=Nohemi+SemBd);
+@import url(https://db.onlinewebfonts.com/c/340730b16e1fc32fe6c5e2ce1d020a54?family=Nohemi+Med);
+@import url(https://db.onlinewebfonts.com/c/29ddb4605533a38e086b48fa105e0d12?family=Nohemi);
+@import url('https://fonts.cdnfonts.com/css/akira-expanded');
+@import url('https://fonts.cdnfonts.com/css/kermesse');
+@import url('https://fonts.cdnfonts.com/css/unbounded');
+@import url(https://db.onlinewebfonts.com/c/38ca91756f261b513c455c73f65ea276?family=Nohemi+ExtLt);
+@import url(https://db.onlinewebfonts.com/c/2acd1ac6664b7b1a1545cc36d0680783?family=Nohemi+SemBd);
+@import url(https://db.onlinewebfonts.com/c/340730b16e1fc32fe6c5e2ce1d020a54?family=Nohemi+Med);
+@import url(https://db.onlinewebfonts.com/c/29ddb4605533a38e086b48fa105e0d12?family=Nohemi);
+@import url('https://fonts.cdnfonts.com/css/inter');
+@import url('https://fonts.cdnfonts.com/css/roboto-condensed');
 
-<!-- Main Content -->
-<div id="content" class="hidden">
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <nav class="navbar">
-            <div class="logo">
-                <img src="./mainlogo01.png" alt="Logo">
-            </div>
-            <div class="menu-toggle" onclick="toggleMenu()">
-                <i class="fas fa-bars"></i>
-            </div>
-            <ul class="nav-links" id="mobileMenu">
-                <li><a href="./index.html">HOME</a></li>
-                <li><a href="./about-us.html">ABOUT 1LANE</a></li>
-                <li><a href="#">REACH</a></li>
-            </ul>
-        </nav>
-
-        <div class="slideshow-container">
-            <div class="slide fade" style="background-image: url('./Zichy\ .jpg');">
-                <div class="content">
-                   <h1 style="font-family: 'MicroMieps Phat', serif; font-size: 18px; font-weight: bold;"> 1 Lift artists 'N' empower</h1>
-                    <h2>Zichy</h2>
-                    <h3>Zichy is a gifted artist whose music embodies love, struggle, and bliss.<br> 
-                        His deeply personal storytelling and melodic mastery captivate listeners across the globe.</h3>
-                    <a href="https://music.apple.com/ng/artist/wahab/1524152508" target="_blank" class="cta-button">
-                        <i class="fa-brands fa-apple"></i> Listen on Apple Music
-                    </a>
-                </div>
-            </div>
-
-            <div class="slide fade" style="background-image: url('./Kaey.jpg');">
-                <div class="content">
-                   <h1 style="font-family: 'MicroMieps Phat', serif; font-size: 18px; font-weight: bold;">
-  1 Lift artists 'N' empower
-</h1>
-
-                    <h2>Kaey</h2>
-                    <h3>Kaey is a dynamic artist known for her genre-blending sound, <br>powerful vocals, and authentic storytelling, 
-                        capturing raw emotion through <br>every lyric and melody she creates.</h3>
-                    <a href="https://music.apple.com/ng/artist/joe-c/1609279957" target="_blank" class="cta-button">
-                        <i class="fa-brands fa-apple"></i> Listen on Apple Music
-                    </a>
-                </div>
-            </div>
-
-
-            <div class="slide fade" style="background-image: url('./PrayzzZ\ .jpg');">
-                <div class="content">
-                   <h1 style="font-family: 'MicroMieps Phat', serif; font-size: 18px; font-weight: bold;">
-  1 Lift artists 'N' empower
-</h1>
-
-                    <h2>PrayzzZ</h2>
-                    <h3>PrayzzZ is a versatile artist with a soul-stirring sound, blending Afrobeat, <br> R&B, Jazz and Hip-Hop 
-                        influences to create music that resonates deeply with diverse audiences.</h3>
-                    <a href="https://music.apple.com/ng/artist/prayzzz/1415098559" target="_blank" class="cta-button">
-                        <i class="fa-brands fa-apple"></i> Listen on Apple Music
-                    </a>
-                </div>
-            </div>
-
-            <div class="slide fade" style="background-image: url('./Stovia\ .jpg');">
-                <div class="content">
-                   <h1 style="font-family: 'MicroMieps Phat', serif; font-size: 18px; font-weight: bold;">
-  1 Lift artists 'N' empower
-</h1>
-
-                    <h2>Stovia</h2>
-                    <h3>Stovia is a rising star blending Afro-soul, R&B, and Afrobeats with irresistible charm. 
-                        <br>Inspired by legends like Nina Simone, she crafts timeless sounds that captivate and inspire.</h3>
-                    <a href="https://music.apple.com/ng/artist/stovia/1650194850" target="_blank" class="cta-button">
-                        <i class="fa-brands fa-apple"></i> Listen on Apple Music
-                    </a>
-                </div>
-            </div>
-
-            <div class="slide fade" style="background-image: url('./Joe\ C.jpg');">
-                <div class="content">
-                   <h1 style="font-family: 'MicroMieps Phat', serif; font-size: 18px; font-weight: bold;">
-  1 Lift artists 'N' empower
-</h1>
-
-                    <h2>Joe C</h2>
-                    <h3>Joe C (Court Joseph) is a Nigerian artist, singer, and songwriter known <br>for blending Afrobeats and Afrosoul. 
-                        His music stands out with powerful vocals. <br>With a unique sound, 
-                        he continues to make a mark in the industry, <br>creating music that deeply resonates with listeners.</h3>
-                    <a href="https://music.apple.com/ng/artist/joe-c/1609279957" target="_blank" class="cta-button">
-                        <i class="fa-brands fa-apple"></i> Listen on Apple Music
-                    </a>
-                </div>
-            </div>
-
-
-            <div class="slide fade" style="background-image: url('./Artist\ Spotlight\ 1.JPG');">
-                <div class="content">
-                   <h1 style="font-family: 'MicroMieps Phat', serif; font-size: 18px; font-weight: bold;">
-  1 Lift artists 'N' empower
-</h1>
-
-                    <h2>Wahab</h2>
-                    <h3>Wahab is a dynamic artist blending Afro-fusion with soulful storytelling. With a sound that resonates 
-                        <br>deeply, he crafts music that connects emotions, culture, and rhythm. <br>Driven by passion and authenticity, 
-                        Wahab is carving his own lane in the <br>industry, delivering melodies that leave a lasting impact.</h3>
-                    <a href="https://music.apple.com/ng/artist/wahab/1524152508" target="_blank" class="cta-button">
-                        <i class="fa-brands fa-apple"></i> Listen on Apple Music
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="what-we-do">
-        <div class="container">
-            <h1 class="responsive-heading">What we do?</h1>
-            <div class="service-boxes">
-                <div class="service-box">
-                    <img src="./Artist Representation.jpg" alt="Service 1">
-                    <h2>Artist Services</h2>
-                    <h3>We offer comprehensive management services, from career development <br>through holistic artist development to 
-                        marketing strategies <br>, ensuring our artists shine in the spotlight.</h3>
-                </div>
-                <div class="service-box">
-                    <img src="./Athlete representation.JPG" alt="Service 2">
-                    <h2>Athlete Representation</h2>
-                    <h3>Our team is dedicated to maximizing the potential of athletes, <br>
-                        providing guidance, sponsorship negotiation, and brand development.</h3>
-                </div>
-                <div class="service-box">
-                    <img src="./Merch slider.jpeg" alt="Service 3">
-                    <h2>Merchandise Development</h2>
-                    <h3>Merchandise Development 1LaNe specializes in creating and promoting merchandise that resonates with fans while enhancing 
-                        brand visibility. Through its subsidiary, Wornlane, the company designs and produces high-quality sportswear that 
-                        seamlessly blends style, functionality, and identity.</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-<!--TEAM SECTION-->
-    <div class="section">
-        <h1>Artist Spotlight</h1>
-        <div class="circles-container">
-            <div class="circle-wrapper">
-                <div class="circle">
-                    <img src="./Artist Spotlight 1.JPG" alt="Image 1">
-                    <div class="hover-text">Wahab</div>
-                </div>
-                <a href="https://music.apple.com/ng/artist/wahab/1524152508" class="btn">Listen on Apple Music</a>
-            </div>
-            <div class="circle-wrapper">
-                <div class="circle">
-                    <img src="./Artist Spotlight 2.jpg" alt="Image 2">
-                    <div class="hover-text">Wonu</div>
-                </div>
-                <a href="your-link-here" class="btn">Listen on Apple Music</a>
-            </div>
-        </div>
-    </div>
-
-    <section class="new-section">
-        <h1 class="section-title">THE LATEST</h1>
-        
-        <div class="boxes-container">
-          <div class="box">
-            <img src="./IMG_8DA612C818CF-1.jpeg" alt="Box 1">
-            <div class="box-content">
-              <p>MUSIC</p>
-              <span class="arrow">&#8594;</span>
-            </div>
-          </div>
-          
-          <div class="box">
-            <img src="./manchester-united-team-250216g1200.jpeg" alt="Box 2">
-            <div class="box-content">
-              <p>SPORTS</p>
-              <span class="arrow">&#8594;</span>
-            </div>
-          </div>
-          
-          <div class="box">
-            <img src="./Snapinsta.app_483634969_18444204076074590_7467653109391155326_n_1080.jpg" alt="Box 3">
-            <div class="box-content">
-              <p>FASHION</p>
-              <span class="arrow">&#8594;</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="center-button-section">
-        <button class="center-button">Submit Songs</button>
-      </section>
-      
-
-
-<!--MERCHENDISE-->
-
-    <section class="shop-merch">
-        <div class="shop-content">
-            <h1 style="font-family: 'MicroMieps Phat', serif; font-size: 18px; font-weight: bold;">Shop wornlane <br>
-                Merchandise</h1>
-                <a href="./about us.html" target="_blank" class="cta-button">
-                    <i class=""></i>Visit Site</a>                
-        </div>
-    </section>
-    
-
-    
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-column">
-            <img src="./1LaNe99jpg.jpg" alt="Company Logo" style="width: 150px; height: auto;">
-        </div>
-        <div class="footer-column">
-            <h2>Product</h2>
-            <ul>
-                <li>Artist Services</li>
-                <li>Athlete Representation</li>
-                <li>Merchandise Development</li>
-            </ul>
-        </div>
-        <div class="footer-column">
-            <h2>Company</h2>
-            <ul>
-                <li>About Us</li>
-                <li>Career</li>
-                <li>Contact Us</li>
-            </ul>
-        </div>
-    </footer>
-
-    <footer class="secondary-footer">
-        <div class="copyright">&copy; 2025 1Lane. All rights reserved.</div>
-        <div class="social-links">
-            <a href="#">Twitter</a>
-            <a href="#">Instagram</a>
-            <a href="#">Facebook</a>
-        </div>
-        <div class="newsletter">
-            <button>Sign Up to Newsletter</button>
-        </div>
-    </footer>
-
-    <script>
-        function toggleMenu() {
-    var menu = document.getElementById("mobileMenu");
-    menu.classList.toggle("active");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
 }
 
-// Close menu when clicking outside
-document.addEventListener("click", function(event) {
-    var menu = document.getElementById("mobileMenu");
-    var toggleButton = document.querySelector(".menu-toggle img");
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    position: relative;
+    width: 100%;
+    height: 105vh;
+    text-align: center;
+    font-size: 12px;
+    background: rgba(0, 0, 0, 1); /* Semi-transparent black */
+    backdrop-filter: blur(50px); /* Blurs everything behind */
+}
 
-    if (!menu.contains(event.target) && !toggleButton.contains(event.target)) {
-        menu.classList.remove("active");
+/* Loader */
+#loader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+#loader img {
+    width: 150px; 
+    animation: spin 3s linear infinite; 
+}
+
+/* Spinning Animation */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Hide content until loaded */
+.hidden {
+    display: none;
+}
+
+/* Navbar inside Hero Section */
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    z-index: 10;
+}
+
+/* Adjusting Logo Size Dynamically */
+.logo img {
+    height: 20px; /* Default for desktop */
+}
+
+/* Menu Icon */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+}
+
+/* Desktop Navigation */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+    .logo img {
+        height: 25px; /* Smaller logo for mobile */
     }
-});
 
-    </script>
+    .menu-toggle {
+        display: block; /* Show menu icon */
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: auto;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin-bottom: 15px;
+    }
+}
 
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    @media (max-width: 768px) {
+        .menu-toggle {
+            display: block;
+        }
+    
+        .nav-links {
+            align-items: center;
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            background: rgba(0, 0, 0, 0.8);
+            width: 200px;
+            padding: 15px;
+        }
+    
+        .nav-links.active {
+            display: flex;
+        }
+    
+        .nav-links li {
+            margin-bottom: 10px;
+        }
 
-    <script>
-            let slideIndex = 0;
-        
-            function showSlides() {
-                let slides = document.querySelectorAll(".slide");
-                slides.forEach(slide => slide.style.opacity = "0");
-        
-                slideIndex++;
-                if (slideIndex > slides.length) { slideIndex = 1; }
-        
-                slides[slideIndex - 1].style.opacity = "1";
-                setTimeout(showSlides, 5000); // Change slide every 5 seconds
-            }
-        
-            window.onload = function () {
-                // Loader fade
-                setTimeout(() => {
-                    document.getElementById("loader").style.display = "none";
-                    document.getElementById("content").classList.remove("hidden");
-                    showSlides(); // Start slideshow after load
-                }, 2000);
-            };
-        </script>
+        .cta-button {
+            margin-top: 30px;
+        }
+    }
 
-</body>
-</html>
+     /* Responsive Text Slideshow */
+     .scrolling-text span {
+        font-size: 16px; /* Smaller text for mobile */
+    }
+
+    @keyframes scrollText {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(-100%);
+        }
+    }
+
+    .hero {
+        font-size: 14px !important;
+    }
+    
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    font-family: 'Unbounded', sans-serif;
+    font-size: 25px;
+}
+
+/* Footer */
+footer {
+    font-family: 'MicroMieps Phat', sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    color: white;
+    padding: 10px;
+    position: relative;
+    border-top: 40px;
+    width: 100%;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .slide {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: fade 1s ease-in-out;
+  }
+  
+  .fade {
+    display: block; /* You can use JS to toggle this per slide */
+  }
+  
+  .slide .content {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    max-width: 90%;
+    padding: 0; /* Removed padding */
+    background: none; /* Removed background */
+    border-radius: 0; /* Removed border radius */
+    z-index: 10;
+  }
+
+  
+  .slide .content h1 {
+    font-family: 'MicroMieps Phat', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .slide .content h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .slide .content h3 {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  
+  .cta-button {
+    font-size: 0.85rem; /* Smaller font size */
+    padding: 0.5rem 1rem; /* Reduced padding */
+    background: #ffffff20; /* Transparent light base */
+    color: white;
+    border: 1px solid white;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  /* Gradient on hover */
+  .cta-button:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    color: white;
+    border-color: transparent;
+  }
+  
+  @media (max-width: 768px) {
+    .slide .content {
+      bottom: 5%;
+      padding: 1rem;
+    }
+  
+    .slide .content h1 {
+      font-size: 1.8rem;
+    }
+  
+    .slide .content h2 {
+      font-size: 1.2rem;
+    }
+  
+    .slide .content h3 {
+      font-size: 0.95rem;
+    }
+  
+    .cta-button {
+      font-size: 0.9rem;
+      padding: 0.6rem 1.2rem;
+    }
+  }
+  
+  @keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+
+.what-we-do {
+    padding: 50px 10%;
+    background: black;
+}
+.what-we-do h1 {
+    font-size: 60px;
+    color: white;
+    margin-bottom: 20px;
+    margin-right: 1200px;
+}
+
+.what-we-do h3 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+    letter-spacing: .02em;
+    line-height: 1.5rem;
+    margin-top: .5rem;
+}
+.service-boxes {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.service-box {
+    flex: 1;
+    min-width: 250px;
+    background: transparent;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    border-color: #fff;
+}
+.service-box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.service-box:hover {
+    transform: scale(1.05);
+}
+@media (max-width: 768px) {
+    .what-we-do h1 {
+        font-size: 30px;
+        color: white;
+        margin-bottom: 20px;
+        margin-right: 1000px;
+    }
+
+    .service-boxes {
+        flex-direction: column;
+    }
+    .content {
+        left: 5%;
+        width: 90%;
+        text-align: center;
+    }
+}
+
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    max-width: 1200px;
+    margin: auto;
+}
+.section h1 {
+    flex: 1;
+    font-size: 40px;
+}
+.circles-container {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+    justify-content: center;
+}
+.circle-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    transition: 0.3s;
+}
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.circle:hover {
+    filter: brightness(0.5);
+}
+.circle:hover .hover-text {
+    opacity: 1;
+}
+.hover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    opacity: 0;
+    transition: 0.3s;
+}
+.btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .circles-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+.shop-merch {
+    background-image: url('./0C0A5597.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 10%;
+    color: white;
+    height: 90vh;
+    text-align: left;
+    position: relative;
+}
+.shop-merch::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+.shop-content {
+    position: relative;
+    z-index: 1;
+}
+.shop-content h1 {
+    font-size: 78px;
+    margin-bottom: 20px;
+}
+.shop-content button {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    background: black;
+    border-color: #fff;
+    color: white;
+    border-radius: 14px;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .shop-content h1 {
+        font-size: 42px;
+    }
+    .shop-content button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
+
+.footer {
+    font-family: "Nohemi SemBd";
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 10%;
+    flex-wrap: wrap;
+}
+.footer img {
+    width: 80px;
+    height: auto;
+}
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+.footer-column h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.footer-column ul {
+    list-style: none;
+}
+.footer-column ul li {
+    font-family: "Nohemi";
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-column {
+        margin-bottom: 30px;
+    }
+}
+
+.newsletter button {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.newsletter button:hover {
+    color: black;
+    background-color: #fff;
+}
+.secondary-footer {
+    font-family: 'Roboto Condensed Light', sans-serif;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    flex-wrap: wrap;
+    border-top: 1px solid white;
+}
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+.social-links a {
+    color: white;
+    text-decoration: none;
+}
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-column {
+        margin-bottom: 30px;
+    }
+    .newsletter {
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .secondary-footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
+
+.responsive-heading {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /* Responsive tweak for mobile screens */
+  @media (max-width: 768px) {
+    .responsive-heading {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .responsive-heading {
+      font-size: 1.5rem;
+    }
+  }
+  
+  .new-section {
+    text-align: center;
+    padding: 40px;
+  }
+  
+  .section-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .boxes-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow boxes to wrap on small screens */
+  }
+  
+  .box {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  
+  .box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+  }
+  
+  .box-content {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-size: 1.2rem;
+    z-index: 1;
+  }
+  
+  .arrow {
+    font-size: 1rem;
+    margin-left: 10px;
+  }
+  
+  /* Hover effect */
+  .box:hover {
+    filter: brightness(0.7); /* Darken the box */
+  }
+  
+  .box:hover img {
+    opacity: 0.7; /* Make the image less prominent */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .box {
+      width: 250px;
+      height: 180px;
+    }
+  
+    .section-title {
+      font-size: 2.5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .box {
+      width: 230px;
+      height: 160px;
+    }
+  
+    .section-title {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .box {
+      width: 100%;
+      height: 150px;
+    }
+  
+    .boxes-container {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .section-title {
+      font-size: 1.5rem;
+    }
+  }
+  
+  .center-button-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh; /* Full viewport height */
+    background-color: #000; /* Light background for the section */
+  }
+  
+  .center-button {
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: #000; /* Blue background */
+    color: white;
+    border: white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover effect */
+  .center-button:hover {
+    background-color: #fff;
+    color: black; 
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .center-button {
+      font-size: 1.3rem;
+      padding: 12px 25px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .center-button {
+      font-size: 1.2rem;
+      padding: 10px 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .center-button {
+      font-size: 1rem;
+      padding: 8px 15px;
+    }
+  }
+  
