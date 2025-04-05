@@ -185,9 +185,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
-    font-family: 'Unbounded', sans-serif;
-    font-size: 25px;
+    height: 100vh;
+    font-size: 20px;
 }
 
 /* Footer */
