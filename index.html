@@ -15,9 +15,11 @@
 </head>
 <body>
  <!-- Loader Screen -->
- <div id="loader">
-    <img src="./1LaNe99jpg.jpg" alt="Loading..."> 
-</div>
+<!-- Loader HTML -->
+<div class="loader">
+    <img src="./mainlogo01.png" alt="Logo" class="loader-logo" />
+  </div>
+  
 
 <!-- Main Content -->
 <div id="content" class="hidden">
@@ -246,9 +248,9 @@
         <div class="footer-column">
             <h2>Company</h2>
             <ul>
-                <li>About Us</li>
-                <li>Career</li>
-                <li>Contact Us</li>
+                <li><a href="./index.html">About Us</a></li>
+                <li><a href="./index.html">Career</a></li>
+                <li><a href="info@1laneco.com">Contact Us</a></li>
             </ul>
         </div>
     </footer>
@@ -287,28 +289,35 @@ document.addEventListener("click", function(event) {
 
 
     <script>
-            let slideIndex = 0;
-        
-            function showSlides() {
-                let slides = document.querySelectorAll(".slide");
-                slides.forEach(slide => slide.style.opacity = "0");
-        
-                slideIndex++;
-                if (slideIndex > slides.length) { slideIndex = 1; }
-        
-                slides[slideIndex - 1].style.opacity = "1";
-                setTimeout(showSlides, 5000); // Change slide every 5 seconds
-            }
-        
-            window.onload = function () {
-                // Loader fade
-                setTimeout(() => {
-                    document.getElementById("loader").style.display = "none";
-                    document.getElementById("content").classList.remove("hidden");
-                    showSlides(); // Start slideshow after load
-                }, 2000);
-            };
-        </script>
-
+        let slideIndex = 0;
+    
+        function showSlides() {
+            let slides = document.querySelectorAll(".slide");
+            slides.forEach(slide => slide.style.opacity = "0");
+    
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+    
+            slides[slideIndex - 1].style.opacity = "1";
+            setTimeout(showSlides, 5000); // Change slide every 5 seconds
+        }
+    
+        window.addEventListener('load', () => {
+            // Delay before removing loader and starting content
+            setTimeout(() => {
+                // Hide loader (use either id or class, make sure it's consistent)
+                const loader = document.getElementById("loader") || document.querySelector(".loader");
+                if (loader) loader.style.display = "none";
+    
+                // Show content
+                const content = document.getElementById("content");
+                if (content) content.classList.remove("hidden");
+    
+                // Start slideshow
+                showSlides();
+            }, 5000); // Set to 2000ms or whatever delay you prefer
+        });
+    </script>
+    
 </body>
 </html>
