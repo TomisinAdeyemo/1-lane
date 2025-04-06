@@ -31,33 +31,36 @@ body {
     backdrop-filter: blur(50px); /* Blurs everything behind */
 }
 
-/* Loader */
-#loader {
+/* Loader container styles */
+.loader {
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background: black;
     display: flex;
-    justify-content: center;
     align-items: center;
-    z-index: 999;
-}
-
-#loader img {
-    width: 150px; 
-    animation: spin 3s linear infinite; 
-}
-
-/* Spinning Animation */
-@keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
-/* Hide content until loaded */
-.hidden {
-    display: none;
-}
+    justify-content: center;
+    z-index: 9999;
+  }
+  
+  /* Logo animation */
+  .loader-logo {
+    width: 150px;
+    animation: pulseFade 5s ease-in-out infinite;
+  }
+  
+  /* Keyframes to animate opacity */
+  @keyframes pulseFade {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.2;
+    }
+  }
+  
 
 /* Navbar inside Hero Section */
 .navbar {
@@ -71,10 +74,25 @@ body {
     z-index: 10;
 }
 
-/* Adjusting Logo Size Dynamically */
 .logo img {
-    height: 40px; /* Default for desktop */
-}
+    max-width: 90px;
+    height: auto;
+    display: block;
+  }
+  
+  /* Optional: Adjust size on smaller devices */
+  @media (max-width: 768px) {
+    .logo img {
+      max-width: 100px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .logo img {
+      max-width: 100px;
+    }
+  }
+  
 
 /* Menu Icon */
 .menu-toggle {
@@ -186,18 +204,6 @@ body {
     align-items: center;
     height: 100vh;
     font-size: 20px;
-}
-
-/* Footer */
-footer {
-    font-family: 'MicroMieps Phat', sans-serif;
-    font-weight: 400;
-    font-size: 10px;
-    color: white;
-    padding: 10px;
-    position: relative;
-    border-top: 40px;
-    width: 100%;
 }
 
 h2 {
@@ -511,6 +517,8 @@ h2 {
         align-items: center;
     }
 }
+
+
 
 
 .shop-merch {
