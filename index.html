@@ -22,7 +22,6 @@
 
 <!-- Main Content -->
 <div id="content" class="hidden">
-
     <!-- Hero Section -->
     <section class="hero">
         <nav class="navbar">
@@ -181,6 +180,31 @@
         </div>
     </div>
 
+    <section class="music-player-section">
+        <h1>Listen to Our Vibes</h1>
+      
+        <div class="player">
+          <div class="track">
+            <img src="./album1.jpeg" alt="Album Cover 1" class="album-cover" />
+            <h2>Zichy - Jerusalem ft. SNE</h2>
+            <audio controls>
+              <source src="./Kaey - Another Day Another Naira.mp3" type="audio/mpeg" />
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+      
+          <div class="track">
+            <img src="./album2.jpeg" alt="Album Cover 2" class="album-cover" />
+            <h2>Kaey - Another Day, Another Naira</h2>
+            <audio controls>
+              <source src="./Zichy Ft. S.N.E - Jerusalem.mp3" type="audio/mpeg" />
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </div>
+      </section>
+      
+
     <section class="new-section">
         <h1 class="section-title">THE LATEST</h1>
         
@@ -322,6 +346,30 @@ document.addEventListener("click", function(event) {
                 showSlides();
             }, 5000); // Set to 2000ms or whatever delay you prefer
         });
+
+        window.addEventListener('load', function () {
+            const loader = document.getElementById('loader');
+            loader.style.display = 'none';
+          
+            // Remove 'loading' class to allow scroll
+            document.body.classList.remove('loading');
+          
+            // Show sections
+            document.querySelectorAll('.section').forEach(section => {
+              section.style.display = 'block';
+            });
+          });
+          
+          // Initially apply 'loading' class and hide content
+          document.addEventListener('DOMContentLoaded', function () {
+            document.body.classList.add('loading');
+          
+            // Hide all sections while loading
+            document.querySelectorAll('.section').forEach(section => {
+              section.style.display = 'none';
+            });
+          });
+          
     </script>
       
     
