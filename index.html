@@ -11,7 +11,6 @@
     <link href="https://fonts.cdnfonts.com/css/roboto-condensed" rel="stylesheet">
     <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
 </head>
 <body>
  <!-- Loader Screen -->
@@ -229,6 +228,18 @@
                     <i class=""></i>Visit Page</a>                
         </div>
     </section>
+
+<!--NEWSLETTER-->
+
+<section class="newsletter-form">
+    <h1>Subscribe to 1LaNe Newsletter</h1>
+    <form class="newsletter-form" action="https://formspree.io/f/mjkypdkd" method="POST">
+      <input type="text" name="Full Name" placeholder="ENTER NAME" required />
+      <input type="email" name="Email" placeholder="ENTER EMAIL ADDRESS" required />
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+  
     
 
     
@@ -263,11 +274,10 @@
             <a href="https://www.linkedin.com/company/1lane-agency/">Linkedin</a>
             <a href="mailto:info@1laneco.com">Contact Us</a>
         </div>
+  
 
-        <div class="newsletter">
-            <button>Sign Up to Our Newsletter</button>
-        </div>
     </footer>
+      
 
     <script>
         function toggleMenu() {
@@ -279,15 +289,9 @@
 document.addEventListener("click", function(event) {
     var menu = document.getElementById("mobileMenu");
     var toggleButton = document.querySelector(".menu-toggle img");
-
-    if (!menu.contains(event.target) && !toggleButton.contains(event.target)) {
-        menu.classList.remove("active");
-    }
 });
 
     </script>
-
-
 
     <script>
         let slideIndex = 0;
@@ -319,6 +323,7 @@ document.addEventListener("click", function(event) {
             }, 5000); // Set to 2000ms or whatever delay you prefer
         });
     </script>
+      
     
 </body>
 </html>
