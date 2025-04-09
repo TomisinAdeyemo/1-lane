@@ -3,43 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1lane</title>
-    <link rel="icon" type="image/png" href="./logo.jpg">
+    <title>1LaNe</title>
+    <link rel="icon" type="image/png" href="./1LaNe99jpg.jpg">
+    <meta name="description" content="1LaNe uplifts and empowers artists through music distribution, marketing, and brand development. 
+    Discover new talent, stream on Apple Music, and more.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.cdnfonts.com/css/roboto-condensed" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
 </head>
 <body>
  <!-- Loader Screen -->
- <div id="loader">
-    <img src="./1LaNe.png" alt="Loading..."> <!-- Replace with your loader image -->
-</div>
+<!-- Loader HTML -->
+    <!-- Hero Section -->
+    <section class="hero">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="./mainlogo01.png" alt="Logo">
+            </div>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="mobileMenu">
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./about-us.html">ABOUT 1LANE</a></li>
+                <li><a href="mailto:info@1laneco.com">REACH</a></li>
+            </ul>
+        </nav>
+      
 
-<!-- Main Content -->
-<div id="content" class="hidden">
+    <section class="new-section">
+        <h1 class="section-title">ABOUT US</h1>
+        <h2 style=" font-family: 'Roboto Condensed', sans-serif; ">1LaNe (1 Lift artists ‘N’ empower) is a full-service entertainment company dedicated 
+            to uplifting and empowering artists. We provide tailored marketing, artist development, 
+            distribution, and sync services, equipping creatives with the knowledge and resources 
+            they need to thrive in the evolving music industry. Our mission is to support artists 
+            in building sustainable careers while ensuring they make informed decisions that align 
+            with their long-term goals. 1LaNe is committed to fostering talent and delivering 
+            impactful creative solutions through a comprehensive and integrated approach.</h2>
+      </section>
+    </section>
 
 
-     <!-- Navbar -->
-     <nav class="navbar">
-        <div class="logo">
-            <img src="./1LaNe.png" alt="Logo" style="height: 10px;">
-        </div>
-        <div class="menu-toggle" onclick="toggleMenu()">
-            <img src="./burger-menu-left-svgrepo-com.png" alt="Menu">
-        </div>
-        
-        <ul class="nav-links">
-            <li><a href="./index.html">HOME</a></li>
-            <li><a href="./about us.html">ABOUT WORNLANE</a></li>
-            <li><a href="#">REACH</a></li>
-        </ul>
-    </nav>
+<!--NEWSLETTER-->
 
+<section class="newsletter-form">
+    <h1>Subscribe to 1LaNe Newsletter</h1>
+    <form class="newsletter-form" action="https://formspree.io/f/xdkeprgw" method="POST">
+      <input type="text" name="Full Name" placeholder="ENTER NAME" required />
+      <input type="email" name="Email" placeholder="ENTER EMAIL ADDRESS" required />
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+  
+    
 
-     <!-- Footer -->
-     <footer class="footer">
+    
+    <!-- Footer -->
+    <footer class="footer">
         <div class="footer-column">
-            <img src="./logo.jpg" alt="Company Logo" style="width: 150px; height: auto;">
+            <img src="./1LaNe99jpg.jpg" alt="Company Logo" style="width: 150px; height: auto;">
         </div>
         <div class="footer-column">
             <h2>Product</h2>
@@ -52,19 +75,95 @@
         <div class="footer-column">
             <h2>Company</h2>
             <ul>
-               <li><a href="./about us.html">About Us</a></li>
-                <li><a href="./about us.html">Career</a></li>
+                <li><a href="./index.html">About Us</a></li>
+                <li><a href="./index.html">Career</a></li>
                 <li> <a href="mailto:info@1laneco.com">Contact Us</a></li>
             </ul>
         </div>
     </footer>
 
     <footer class="secondary-footer">
-        <div class="copyright">&copy; 2025 Your Company. All rights reserved.</div>
+        <div class="copyright">&copy; 2025 1Lane. All rights reserved.</div>
         <div class="social-links">
-               <a href="https://x.com/1lanemusic?s=21&t=UeOIJIUJKAv_Sqv0QKPeVw">Twitter</a>
+            <a href="https://x.com/1lanemusic?s=21&t=UeOIJIUJKAv_Sqv0QKPeVw">Twitter</a>
             <a href="https://www.instagram.com/1lanemusic?igsh=MWNqZm01Z251b2toZg==">Instagram</a>
             <a href="https://www.linkedin.com/company/1lane-agency/">Linkedin</a>
             <a href="mailto:info@1laneco.com">Contact Us</a>
         </div>
+  
+
     </footer>
+      
+
+    <script>
+        function toggleMenu() {
+    var menu = document.getElementById("mobileMenu");
+    menu.classList.toggle("active");
+}
+
+// Close menu when clicking outside
+document.addEventListener("click", function(event) {
+    var menu = document.getElementById("mobileMenu");
+    var toggleButton = document.querySelector(".menu-toggle img");
+});
+
+    </script>
+
+    <script>
+        let slideIndex = 0;
+    
+        function showSlides() {
+            let slides = document.querySelectorAll(".slide");
+            slides.forEach(slide => slide.style.opacity = "0");
+    
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+    
+            slides[slideIndex - 1].style.opacity = "1";
+            setTimeout(showSlides, 5000); // Change slide every 5 seconds
+        }
+    
+        window.addEventListener('load', () => {
+            // Delay before removing loader and starting content
+            setTimeout(() => {
+                // Hide loader (use either id or class, make sure it's consistent)
+                const loader = document.getElementById("loader") || document.querySelector(".loader");
+                if (loader) loader.style.display = "none";
+    
+                // Show content
+                const content = document.getElementById("content");
+                if (content) content.classList.remove("hidden");
+    
+                // Start slideshow
+                showSlides();
+            }, 5000); // Set to 2000ms or whatever delay you prefer
+        });
+
+        window.addEventListener('load', function () {
+            const loader = document.getElementById('loader');
+            loader.style.display = 'none';
+          
+            // Remove 'loading' class to allow scroll
+            document.body.classList.remove('loading');
+          
+            // Show sections
+            document.querySelectorAll('.section').forEach(section => {
+              section.style.display = 'block';
+            });
+          });
+          
+          // Initially apply 'loading' class and hide content
+          document.addEventListener('DOMContentLoaded', function () {
+            document.body.classList.add('loading');
+          
+            // Hide all sections while loading
+            document.querySelectorAll('.section').forEach(section => {
+              section.style.display = 'none';
+            });
+          });
+          
+    </script>
+      
+    
+</body>
+</html>
