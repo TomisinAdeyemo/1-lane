@@ -33,7 +33,7 @@
             </div>
             <ul class="nav-links" id="mobileMenu">
                 <li><a href="./index.html">HOME</a></li>
-                <li><a href="./about us.html">ABOUT 1LANE</a></li>
+                <li><a href="./about-us.html">ABOUT 1LANE</a></li>
                 <li><a href="mailto:info@1laneco.com">REACH</a></li>
             </ul>
         </nav>
@@ -67,7 +67,7 @@
             </div>
 
 
-            <div class="slide fade" style="background-image: url('./PrayzzZ\ .jpg');">
+            <div class="slide fade" style="background-image: url('./praze.jpg');">
                 <div class="content">
                    <h1 style="font-family: 'MicroMieps Phat', serif; font-size: 18px; font-weight: bold;">
   1 Lift artists 'N' empower
@@ -133,7 +133,7 @@
     </section>
 
 
-    <section class="what-we-do">
+    <section class="what-we-do" class="parallax parallax-section">
         <div class="container">
             <h1 class="responsive-heading">What we do?</h1>
             <div class="service-boxes">
@@ -160,7 +160,7 @@
         </div>
     </section>
 <!--TEAM SECTION-->
-    <div class="section">
+    <div class="section" class="parallax parallax-section">
         <h1>Next-N-Line</h1>
         <div class="circles-container">
             <div class="circle-wrapper">
@@ -180,7 +180,7 @@
         </div>
     </div>
 
-    <section class="music-player-section">
+    <section class="music-player-section" class="parallax parallax-section">
         <h1>Our ▶️ground: What 1LaNe is Spinning</h1>
       
         <div class="player">
@@ -205,7 +205,7 @@
       </section>
       
 
-    <section class="new-section">
+    <section class="new-section" class="parallax parallax-section">
         <h1 class="section-title">THE LATEST</h1>
         
         <div class="boxes-container">
@@ -371,6 +371,15 @@ document.addEventListener("click", function(event) {
           });
           
     </script>
+      
+    <script>
+        window.addEventListener('scroll', () => {
+          const scrolled = window.scrollY;
+          document.querySelectorAll('.parallax').forEach(el => {
+            el.style.backgroundPositionY = -(scrolled * 0.5) + 'px';
+          });
+        });
+      </script>
       
     
 </body>
