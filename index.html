@@ -16,7 +16,7 @@
  <!-- Loader Screen -->
 <!-- Loader HTML -->
 <div class="loader">
-    <img src="./mainlogo03.png" alt="Logo" class="loader-logo" />
+    <img src="./mainlogo01.png" alt="Logo" class="loader-logo" />
   </div>
   
 
@@ -26,14 +26,14 @@
     <section class="hero">
         <nav class="navbar">
             <div class="logo">
-                <img src="./mainlogo03.png" alt="Logo">
+                <img src="./mainlogo01.png" alt="Logo">
             </div>
             <div class="menu-toggle" onclick="toggleMenu()">
                 <i class="fas fa-bars"></i>
             </div>
             <ul class="nav-links" id="mobileMenu">
                 <li><a href="./index.html">HOME</a></li>
-                <li><a href="./about us.html">ABOUT 1LANE</a></li>
+                <li><a href="./about-us.html">ABOUT 1LANE</a></li>
                 <li><a href="mailto:info@1laneco.com">REACH</a></li>
             </ul>
         </nav>
@@ -133,34 +133,35 @@
     </section>
 
 
-    <section class="what-we-do" class="parallax parallax-section">
+    <section class="what-we-do parallax-section">
         <div class="container">
-            <h1 class="responsive-heading">What we do?</h1>
-            <div class="service-boxes">
-                <div class="service-box">
-                    <img src="./Artist Representation.jpg" alt="Service 1">
-                    <h2>Artist Services</h2>
-                    <h3>We offer comprehensive management services, <br>from career development through holistic artist development to 
-                        marketing strategies, ensuring our artists shine in the spotlight.</h3>
-                </div>
-                <div class="service-box">
-                    <img src="./Athlete representation.JPG" alt="Service 2">
-                    <h2>Athlete Representation</h2>
-                    <h3>Our team is dedicated to maximizing the potential of <br> athletes,
-                        providing guidance, sponsorship negotiation, and brand development.</h3>
-                </div>
-                <div class="service-box">
-                    <img src="./Merch slider.jpeg" alt="Service 3">
-                    <h2>Merchandise Development</h2>
-                    <h3>1LaNe specializes in creating and promoting merchandise that resonates with fans while enhancing 
-                        brand visibility. Through its subsidiary, Wornlane, the company designs and produces high-quality sportswear that 
-                        seamlessly blends style, functionality, and identity.</h3>
-                </div>
+          <h1 class="responsive-heading">What we do?</h1>
+          <div class="service-boxes">
+            <div class="service-box fade-in">
+              <img src="./Artist Representation.jpg" alt="Service 1">
+              <h2>Artist Services</h2>
+              <h3>We offer comprehensive management services, <br>from career development through holistic artist development to 
+                marketing strategies, ensuring our artists shine in the spotlight.</h3>
             </div>
+            <div class="service-box fade-in">
+              <img src="./Athlete representation.JPG" alt="Service 2">
+              <h2>Athlete Representation</h2>
+              <h3>Our team is dedicated to maximizing the potential of <br> athletes,
+                providing guidance, sponsorship negotiation, and brand development.</h3>
+            </div>
+            <div class="service-box fade-in">
+              <img src="./Merch slider.jpeg" alt="Service 3">
+              <h2>Merchandise Development</h2>
+              <h3>1LaNe specializes in creating and promoting merchandise that resonates with fans while enhancing 
+                brand visibility. Through its subsidiary, Wornlane, the company designs and produces high-quality sportswear that 
+                seamlessly blends style, functionality, and identity.</h3>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
+
 <!--TEAM SECTION-->
-    <div class="section" class="parallax parallax-section">
+    <div class="section">
         <h1>Next-N-Line</h1>
         <div class="circles-container">
             <div class="circle-wrapper">
@@ -205,7 +206,7 @@
       </section>
       
 
-    <section class="new-section" class="parallax parallax-section">
+    <section class="new-section">
         <h1 class="section-title">THE LATEST</h1>
         
         <div class="boxes-container">
@@ -369,18 +370,34 @@ document.addEventListener("click", function(event) {
               section.style.display = 'none';
             });
           });
+
+          window.addEventListener('scroll', function() {
+            const boxes = document.querySelectorAll('.box');
+            
+            boxes.forEach(function(box) {
+              const boxTop = box.getBoundingClientRect().top;
+              const scrollPosition = window.scrollY;
+          
+              // Adjust the background position based on scroll
+              box.style.backgroundPosition = `center ${-(scrollPosition * 0.5)}px`; // Adjust 0.5 to change speed
+            });
+          });
+          
           
     </script>
-      
+
     <script>
-        window.addEventListener('scroll', () => {
-          const scrolled = window.scrollY;
-          document.querySelectorAll('.parallax').forEach(el => {
-            el.style.backgroundPositionY = -(scrolled * 0.5) + 'px';
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
           });
         });
-      </script>
       
+        document.querySelectorAll('.service-box').forEach(el => observer.observe(el));
+      </script>
     
 </body>
 </html>
