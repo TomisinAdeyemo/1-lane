@@ -392,10 +392,11 @@ h2 {
   
   
 
-.what-we-do {
+  .what-we-do {
     padding: 50px 10%;
     background: black;
 }
+
 .what-we-do h1 {
     font-size: 60px;
     color: white;
@@ -410,11 +411,13 @@ h2 {
     line-height: 1.5rem;
     margin-top: .5rem;
 }
+
 .service-boxes {
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
 }
+
 .service-box {
     flex: 1;
     min-width: 250px;
@@ -424,7 +427,18 @@ h2 {
     border-radius: 10px;
     transition: transform 0.3s ease-in-out;
     border-color: #fff;
+
+    /* SCROLL EFFECT BASE STATE */
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
 }
+
+.service-box.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .service-box img {
     width: 100%;
     height: 200px;
@@ -457,7 +471,6 @@ h2 {
     }
 }
 
-
 .section {
     display: flex;
     align-items: center;
@@ -472,7 +485,7 @@ h2 {
 }
 .circles-container {
     display: flex;
-    gap: 20px;
+    gap: 0px;
     flex: 1;
     justify-content: center;
 }
@@ -1055,30 +1068,205 @@ h2 {
       font-size: 2.5rem;
     }
   }
-  
-  /* Parallax section base */
-.parallax {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  
-  /* Example styles for sections with parallax */
-  .hero {
-    position: relative;
-    min-height: 100vh;
-    overflow: hidden;
-  }
-  
-  .parallax-section {
-    background-image: url('./your-parallax-background.jpg'); /* Replace with your image */
-    min-height: 100vh;
-    padding: 100px 20px;
-    color: white;
+ 
+  /* Basic Layout */
+  .next-section {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
+    padding: 80px 60px;
+    background: #000;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(100px);
+    filter: blur(4px);
+    transition:
+      opacity 1.2s ease,
+      transform 1.2s ease,
+      filter 1.2s ease;
+  }
+  
+  .next-section.show {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+  
+/* Left Side */
+.next-left {
+  flex: 1;
+}
+
+.next-left h1 {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+/* Right Side */
+.next-right {
+  display: flex;
+  gap: 40px;
+  flex: 1;
+  justify-content: center;
+}
+
+.circle-wrapper {
+  text-align: center;
+}
+
+.circle {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid white;
+  cursor: pointer;
+}
+
+.circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.circle:hover img {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  font-weight: bold;
+}
+
+.circle:hover .overlay {
+  opacity: 1;
+}
+
+.circle-wrapper a {
+  margin-top: 12px;
+  display: inline-block;
+  color: #1e90ff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.circle-wrapper a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .next-section {
+    flex-direction: column;
     text-align: center;
   }
-  
+
+  .next-right {
+    margin-top: 40px;
+  }
+
+  .next-left h1 {
+    font-size: 40px;
+  }
+}
+
+.image-box-section {
+  padding: 80px 60px;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(100px);
+  filter: blur(8px);
+  transition:
+    opacity 1.2s ease,
+    transform 1.2s ease,
+    filter 1.2s ease;
+}
+
+.image-box-section.show {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+.section-title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 60px;
+}
+
+.box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.image-box {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: filter 0.4s ease;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.image-box:hover img {
+  opacity: 0.7;
+}
+
+.box-content {
+  position: absolute;
+  bottom: 20px;  /* Lower the text */
+  left: 20px;
+  z-index: 2;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.arrow {
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+.image-box:hover .arrow {
+  transform: translateX(6px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .box-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-title {
+    font-size: 36px;
+  }
+}
