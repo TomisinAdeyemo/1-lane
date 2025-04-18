@@ -161,25 +161,34 @@
       </section>
 
 <!--TEAM SECTION-->
-    <div class="section">
-        <h1>Next-N-Line</h1>
-        <div class="circles-container">
-            <div class="circle-wrapper">
-                <div class="circle">
-                    <img src="./Artist Spotlight 1.JPG" alt="Image 1">
-                    <div class="hover-text">Wahab</div>
-                </div>
-                <a href="https://music.apple.com/ng/artist/wahab/1524152508" class="btn">Listen on Apple Music</a>
-            </div>
-            <div class="circle-wrapper">
-                <div class="circle">
-                    <img src="./Artist Spotlight 2.jpg" alt="Image 2">
-                    <div class="hover-text">Wonu</div>
-                </div>
-                <a href="https://music.apple.com/ng/artist/wonu/1453561198" class="btn">Listen on Apple Music</a>
-            </div>
-        </div>
+<section class="next-section">
+    <!-- Left side -->
+    <div class="next-left">
+      <h1>Next in line</h1>
     </div>
+  
+    <!-- Right side -->
+    <div class="next-right">
+      <!-- Circle 1 -->
+      <div class="circle-wrapper">
+        <div class="circle">
+          <img src="./Artist Spotlight 1.JPG" alt="Artist 1">
+          <div class="overlay">Wahab</div>
+        </div>
+        <a href="https://music.apple.com" target="_blank">Listen on Apple Music</a>
+      </div>
+  
+      <!-- Circle 2 -->
+      <div class="circle-wrapper">
+        <div class="circle">
+          <img src="./Artist Spotlight 2.jpg" alt="Artist 2">
+          <div class="overlay">Wonu</div>
+        </div>
+        <a href="https://music.apple.com" target="_blank">Listen on Apple Music</a>
+      </div>
+    </div>
+  </section>
+  
 
     <section class="music-player-section" class="parallax parallax-section">
         <h1>Our ▶️ground: What 1LaNe is Spinning</h1>
@@ -206,32 +215,35 @@
       </section>
       
 
-    <section class="new-section">
+      <section class="image-box-section">
         <h1 class="section-title">THE LATEST</h1>
-        
-        <div class="boxes-container">
-          <div class="box">
-            <img src="./IMG_8DA612C818CF-1.jpeg" alt="Box 1">
+      
+        <div class="box-container">
+          <!-- Box 1 -->
+          <div class="image-box">
             <div class="box-content">
               <p>MUSIC</p>
-              <span class="arrow">&#8594;</span>
+              <span class="arrow">→</span>
             </div>
+            <img src="./IMG_8DA612C818CF-1.jpeg" alt="Explore">
           </div>
-          
-          <div class="box">
-            <img src="./manchester-united-team-250216g1200.jpeg" alt="Box 2">
+      
+          <!-- Box 2 -->
+          <div class="image-box">
             <div class="box-content">
               <p>SPORTS</p>
-              <span class="arrow">&#8594;</span>
+              <span class="arrow">→</span>
             </div>
+            <img src="./manchester-united-team-250216g1200.jpeg" alt="Releases">
           </div>
-          
-          <div class="box">
-            <img src="./rightone.jpeg" alt="Box 3">
+      
+          <!-- Box 3 -->
+          <div class="image-box">
             <div class="box-content">
               <p>FASHION</p>
-              <span class="arrow">&#8594;</span>
+              <span class="arrow">→</span>
             </div>
+            <img src="./rightone.jpeg" alt="Charts">
           </div>
         </div>
       </section>
@@ -398,6 +410,33 @@ document.addEventListener("click", function(event) {
       
         document.querySelectorAll('.service-box').forEach(el => observer.observe(el));
       </script>
+
+      <script>
+        const section = document.querySelector('.next-section');
+        const onScroll = () => {
+          const rect = section.getBoundingClientRect();
+          if (rect.top < window.innerHeight - 100) {
+            section.classList.add('show');
+            window.removeEventListener('scroll', onScroll);
+          }
+        };
+        window.addEventListener('scroll', onScroll);
+        onScroll();
+      </script>
+      
+      <script>
+        const imageBoxSection = document.querySelector('.image-box-section');
+        const onScrollBoxes = () => {
+          const rect = imageBoxSection.getBoundingClientRect();
+          if (rect.top < window.innerHeight - 100) {
+            imageBoxSection.classList.add('show');
+            window.removeEventListener('scroll', onScrollBoxes);
+          }
+        };
+        window.addEventListener('scroll', onScrollBoxes);
+        onScrollBoxes();
+      </script>
+      
     
 </body>
 </html>
