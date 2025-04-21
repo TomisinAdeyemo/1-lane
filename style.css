@@ -1271,7 +1271,7 @@ h2 {
   }
 }
 
-.container {
+.container-achievements {
   margin-top: -1200px;
   max-width: 800px;
   width: 100%;
@@ -1284,7 +1284,7 @@ h1 {
   margin-bottom: 20px;
 }
 
-p {
+.p-main {
   font-family: Roboto Condensed Light;
   font-size: 1.2rem;
   line-height: 1.8;
@@ -1292,11 +1292,6 @@ p {
   max-width: 700px;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  margin: 30px 0;
-}
 
 /* Responsive styles */
 @media (max-width: 768px) {
@@ -1346,6 +1341,7 @@ img {
 .blog-image {
   width: 100%;
   height: auto;
+  margin: 50px 0;
   transition: filter 0.3s ease;
 }
 
@@ -1360,4 +1356,3 @@ img {
   background-clip: text;
   color: transparent;
 }
-
