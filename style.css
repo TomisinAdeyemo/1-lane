@@ -1373,3 +1373,9 @@ h1 {
   background-clip: text;
   color: transparent;
 }
+
+.image-box-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
