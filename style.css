@@ -688,8 +688,10 @@ h2 {
 }
 
 .footer-column ul li a {
-    color: #fff;
+  color: #fff;
 }
+
+
 @media (max-width: 768px) {
     .footer {
         flex-direction: column;
@@ -1187,16 +1189,26 @@ h2 {
   .next-section {
     flex-direction: column;
     text-align: center;
-  }
-
-  .next-right {
-    margin-top: 40px;
+    align-items: center;
+    gap: 30px; /* Add some space between the items vertically */
   }
 
   .next-left h1 {
-    font-size: 40px;
+    font-size: 36px; /* Slightly smaller for mobile */
+  }
+
+  .next-right {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .next-right .circle {
+    width: 120px;
+    height: 120px;
   }
 }
+
 
 .image-box-section {
   padding: 80px 60px;
@@ -1369,4 +1381,93 @@ h1 {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
+}
+
+
+.p-main {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 1rem auto;
+  max-width: 800px;
+  padding: 0 1rem;
+}
+
+/* Slideshow Container */
+.afrobeats-slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
+}
+
+/* Slideshow Wrapper */
+.afrobeats-slideshow {
+  position: relative;
+  width: 100%;
+  height: 200%;
+}
+
+.afrobeats-slide {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.afrobeats-slide.active-slide {
+  display: block;
+  animation: fade 1s ease-in-out;
+}
+
+/* Heading Overlay */
+.afrobeats-slideshow-heading {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  font-size: 2rem;
+  color: #fff;
+  z-index: 2;
+}
+
+/* Achievements Container */
+.container-achievements {
+  padding: 3rem 1rem;
+}
+
+.container-achievements h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Highlighted Span Style */
+.container-achievements span {
+  font-weight: bold;
+  color: #f0c040;
+}
+
+/* Fade Animation for slideshow */
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .afrobeats-slideshow-heading {
+    font-size: 1.5rem;
+    padding: 0.8rem;
+  }
+
+  .p-main {
+    font-size: 0.95rem;
+  }
 }
