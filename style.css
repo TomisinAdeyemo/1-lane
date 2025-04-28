@@ -1436,8 +1436,9 @@ h1 {
 }
 
 .container-achievements h1 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
+  font-size: 40px;
+  font-weight: 900;
+  margin-top: 70px;
 }
 
 /* Highlighted Span Style */
