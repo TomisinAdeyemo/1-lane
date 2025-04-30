@@ -1436,6 +1436,7 @@ font-family: 'Hind Siliguri', sans-serif;
 
 /* Achievements Container */
 .container-achievements {
+  font-family: 'Hind Siliguri', sans-serif;
   padding: 3rem 1rem;
 }
 
@@ -1466,18 +1467,6 @@ font-family: 'Hind Siliguri', sans-serif;
   .p-main {
     font-size: 0.95rem;
   }
-}
-
-.special-name {
-  color: darkslateblue; /* Nice standout color */
-  font-weight: bold;
-  font-size: 1.2em;
-  letter-spacing: 1px;
-}
-
-.special-name2 {
-  font-weight: 2rem;
-  color: darkblue;
 }
 
 .picture-container {
@@ -1564,3 +1553,47 @@ font-family: 'Hind Siliguri', sans-serif;
     font-size: 2.5rem;
   }
 }
+
+.stream-box {
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 0;
+}
+
+.image-box {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: auto;
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  text-align: center;
+}
+
+.overlay a {
+  color: #fff;
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .overlay a {
+    font-size: 1rem;
+  }
+}
+
