@@ -1561,14 +1561,14 @@ font-family: 'Hind Siliguri', sans-serif;
   padding: 0;
 }
 
-.image-box {
+.image-box1 {
   position: relative;
   width: 100%;
   overflow: hidden;
   height: auto;
 }
 
-.image-box img {
+.image-box1 img {
   width: 100%;
   height: auto;
   display: block;
