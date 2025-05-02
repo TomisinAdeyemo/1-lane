@@ -1472,7 +1472,7 @@ font-family: 'Hind Siliguri', sans-serif;
 .picture-container {
   position: relative;
   width: 100%;
-  height: 60vh;
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -1481,7 +1481,7 @@ font-family: 'Hind Siliguri', sans-serif;
   top: 0;
   left: 0;
   width: 100%;
-  height: 250%;
+  height: 100%;
 }
 
 .slideshow img {
@@ -1597,3 +1597,21 @@ font-family: 'Hind Siliguri', sans-serif;
   }
 }
 
+.background-slideshow {
+  width: 100%;
+  max-width: 667px;
+  aspect-ratio: 567 / 451;
+  margin: 70px auto 0 auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  animation: slideShow 15s infinite;
+}
+
+/* Define keyframes to cycle through images */
+@keyframes slideShow {
+  0%   { background-image: url('./spot1.jpg'); }
+  33%  { background-image: url('./spot2.jpg'); }
+  66%  { background-image: url('./spot3.jpg'); }
+  100% { background-image: url('./spot2.jpg'); }
+}
