@@ -32,8 +32,8 @@
             </div>
             <ul class="nav-links" id="mobileMenu">
                 <li><a href="./index.html">HOME</a></li>
-                <li><a href="./about-us.html">ABOUT 1LANE</a></li>
-                 <li><a href="./achievements.html">ACHIEVEMENTS</a></li>
+                <li><a href="./about us.html">ABOUT 1LANE</a></li>
+                <li><a href="./achievements.html">ACHIEVEMENTS</a></li>
                 <li><a href="mailto:info@1laneco.com">REACH</a></li>
             </ul>
         </nav>
@@ -44,15 +44,20 @@
     <h1 class="team">Join Our Team</h1>
   </section>
 
-<section class="newsletter-form">
+  <section class="newsletter-form">
     <h1>Submit Application</h1>
-    <form class="newsletter-form" action="https://formspree.io/f/moverzpy" method="POST">
+    <form class="newsletter-form" action="https://formspree.io/f/moverzpy" method="POST" enctype="multipart/form-data">
       <input type="text" name="Full Name" placeholder="ENTER NAME" required />
       <input type="email" name="Email" placeholder="ENTER EMAIL ADDRESS" required />
-      <input type="email" name="Position" placeholder="ENTER ROLE" required />
+      <input type="text" name="Position" placeholder="ENTER ROLE" required />
+      
+      <label for="cv-upload">Upload Your CV or Document:</label>
+      <input type="file" id="cv-upload" name="cv" accept=".pdf,.doc,.docx" required />
+  
       <button type="submit">Submit</button>
     </form>
   </section>
+  
   
     
 
@@ -63,7 +68,7 @@
             <img src="./1LaNe99jpg.jpg" alt="Company Logo" style="width: 150px; height: auto;">
         </div>
         <div class="footer-column">
-            <h2>Products</h2>
+            <h2>Product</h2>
             <ul>
                 <li>Artist Services</li>
                 <li>Athlete Representation</li>
