@@ -380,6 +380,7 @@ h2 {
 }
 
 .what-we-do h1 {
+    font-family: 'MicroMieps Phat', sans-serif;
     font-size: 60px;
     color: white;
     margin-bottom: 20px;
@@ -1088,6 +1089,7 @@ h2 {
 }
 
 .next-left h1 {
+  font-family: 'MicroMieps Phat', sans-serif;
   font-size: 60px;
   font-weight: bold;
 }
