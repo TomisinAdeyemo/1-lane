@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SPORTS</title>
+    <title>NEXT N LINE</title>
     <link rel="icon" type="image/png" href="./1LaNe99jpg.jpg">
     <meta name="description" content="1LaNe uplifts and empowers artists through music distribution, marketing, and brand development. 
     Discover new talent, stream on Apple Music, and more.">
@@ -34,9 +34,9 @@
 
         <div class="slideshow-box">
           <div class="slideshow-wrapper">
-            <img src="./MANU1.jpeg" class="slide-img active" alt="Slide 1" />
-            <img src="./MANU2.jpeg" class="slide-img" alt="Slide 2" />
-            <img src="./MANU3.jpeg" class="slide-img" alt="Slide 3" />
+            <img src="./MANU1.jpeg" class="slide-img manu-slide active" />
+            <img src="./MANU2.jpeg" class="slide-img manu-slide" />
+            <img src="./MANU3.jpeg" class="slide-img manu-slide active" />
             <div class="bottom-tint"></div>
           </div>
         </div>
@@ -78,12 +78,11 @@
              <h1>ARSENAL TARGET GIBBS-WHITE TO BOLSTER MILDFIED FIREPOWER
             </h1>
 
-              <div class="stream-box">
-                <div class="image-box1">
-                  <img src="./ars1.jpeg" alt="football cover">
-                  <div class="overlay">
+            <div class="slideshow-box1">
+                <div class="slideshow-wrapper2">
+                    <img src="./ars1.jpeg" class="slide-img ars-slide active" />
+                    <img src="./ars2.jpeg" class="slide-img ars-slide" />
                   </div>
-                </div>
               </div>
 
             <p class="p-main">Arsenal are reportedly stepping up their pursuit of Nottingham Forest playmaker Morgan Gibbs-White as 
@@ -181,12 +180,6 @@
     menu.classList.toggle("active");
 }
 
-// Close menu when clicking outside
-document.addEventListener("click", function(event) {
-    var menu = document.getElementById("mobileMenu");
-    var toggleButton = document.querySelector(".menu-toggle img");
-});
-
     </script>
 
     <script>
@@ -198,6 +191,22 @@ document.addEventListener("click", function(event) {
         current = (current + 1) % slides.length;
         slides[current].classList.add("active");
       }, 5000);
+    </script>
+
+    <script>
+        function runSlideshow(slidesClass, interval = 5000) {
+            const slides = document.querySelectorAll(slidesClass);
+            let current = 0;
+            setInterval(() => {
+              slides[current].classList.remove("active");
+              current = (current + 1) % slides.length;
+              slides[current].classList.add("active");
+            }, interval);
+          }
+          
+          runSlideshow(".manu-slide");
+          runSlideshow(".ars-slide");
+          
     </script>
     
       
