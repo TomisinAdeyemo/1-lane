@@ -28,11 +28,21 @@
                 <li><a href="./index.html">HOME</a></li>
                 <li><a href="./about us.html">ABOUT 1LANE</a></li>
                 <li><a href="./achievements.html">ACHIEVEMENTS</a></li>
-                <li><a href="mailto:info@1laneco.com">REACH</a></li>
+                <li><a href="mailto:support@1laneco.com">REACH US</a></li>
             </ul>
         </nav>
 
-        <div class="background-slideshow"></div>
+        <div class="slideshow-box">
+          <div class="slideshow-wrapper">
+            <img src="./spot1.jpg" class="slide-img active" alt="Slide 1" />
+            <img src="./spot2.jpg" class="slide-img" alt="Slide 2" />
+            <img src="./spot3.jpg" class="slide-img" alt="Slide 3" />
+            <div class="bottom-tint"></div>
+          </div>
+        </div>
+        
+        
+        
 
         <div class="container-achievements">
             <h1>NEXT-N-LINE: THE MOUNTAINEER OF AFROBEATS</h1>
@@ -185,6 +195,18 @@ document.addEventListener("click", function(event) {
 });
 
     </script>
+
+    <script>
+      const slides = document.querySelectorAll(".slide-img");
+      let current = 0;
+    
+      setInterval(() => {
+        slides[current].classList.remove("active");
+        current = (current + 1) % slides.length;
+        slides[current].classList.add("active");
+      }, 5000);
+    </script>
+    
       
     
 </body>
