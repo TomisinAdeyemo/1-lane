@@ -870,7 +870,7 @@ h2 {
   
   .center-button {
     padding: 10px 10px;
-    font-family: 'MicroMieps Phat', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 12px;
     font-weight: bold;
     background-color: #000; /* Blue background */
@@ -1296,6 +1296,7 @@ h1 {
 /* Responsive styles */
 @media (max-width: 768px) {
   h1 {
+    margin-top: 40px;
     font-size: 2rem;
   }
 
@@ -1306,6 +1307,7 @@ h1 {
 
 @media (max-width: 480px) {
   .container {
+     margin-top: 40px;
     padding: 20px 10px;
   }
 
