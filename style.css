@@ -67,6 +67,28 @@ body {
   opacity: 0;
 }
 
+.loader-text {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  color: gold;
+  opacity: 0;
+  animation: fadeInText 2s ease forwards, goldShine 2s infinite linear;
+}
+
+/* Fade-in animation */
+@keyframes fadeInText {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Gold shining animation */
+@keyframes goldShine {
+  0% { text-shadow: 0 0 5px gold; }
+  50% { text-shadow: 0 0 20px gold; }
+  100% { text-shadow: 0 0 5px gold; }
+}
+
 
 /* Navbar inside Hero Section */
 .navbar {
