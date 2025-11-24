@@ -358,73 +358,75 @@ document.addEventListener("click", function(event) {
 
     </script>
 
-    <script>
-        let slideIndex = 0;
-    
-        function showSlides() {
-            let slides = document.querySelectorAll(".slide");
-            slides.forEach(slide => slide.style.opacity = "0");
-    
-            slideIndex++;
-            if (slideIndex > slides.length) { slideIndex = 1; }
-    
-            slides[slideIndex - 1].style.opacity = "1";
-            setTimeout(showSlides, 5000); // Change slide every 5 seconds
+   <script>
+/* ---------------------------
+   SLIDESHOW
+----------------------------*/
+let slideIndex = 0;
+
+function showSlides() {
+    const slides = document.querySelectorAll(".slide");
+    slides.forEach(slide => slide.style.opacity = "0");
+
+    slideIndex++;
+    if (slideIndex > slides.length) slideIndex = 1;
+
+    slides[slideIndex - 1].style.opacity = "1";
+
+    setTimeout(showSlides, 5000); // Every 5 seconds
+}
+
+/* ---------------------------
+   LOADER SYSTEM (CLEAN)
+----------------------------*/
+
+// Hide sections until loading completes
+document.addEventListener("DOMContentLoaded", () => {
+    document.body.classList.add("loading");
+
+    document.querySelectorAll(".section").forEach(section => {
+        section.style.display = "none";
+    });
+});
+
+// Main loader control
+window.addEventListener("load", () => {
+    const loader = document.getElementById("loader") || document.querySelector(".loader");
+
+    // Delay loader removal
+    setTimeout(() => {
+        if (loader) {
+            loader.classList.add("fade-out"); // for CSS animation
+            setTimeout(() => loader.style.display = "none", 600); // remove after fade
         }
-    
-        window.addEventListener('load', () => {
-            // Delay before removing loader and starting content
-            setTimeout(() => {
-                // Hide loader (use either id or class, make sure it's consistent)
-                const loader = document.getElementById("loader") || document.querySelector(".loader");
-                if (loader) loader.style.display = "none";
-    
-                // Show content
-                const content = document.getElementById("content");
-                if (content) content.classList.remove("hidden");
-    
-                // Start slideshow
-                showSlides();
-            }, 5000); // Set to 2000ms or whatever delay you prefer
+
+        // Allow scrolling again
+        document.body.classList.remove("loading");
+
+        // Reveal sections
+        document.querySelectorAll(".section").forEach(section => {
+            section.style.display = "block";
         });
 
-        window.addEventListener('load', function () {
-            const loader = document.getElementById('loader');
-            loader.style.display = 'none';
-          
-            // Remove 'loading' class to allow scroll
-            document.body.classList.remove('loading');
-          
-            // Show sections
-            document.querySelectorAll('.section').forEach(section => {
-              section.style.display = 'block';
-            });
-          });
-          
-          // Initially apply 'loading' class and hide content
-          document.addEventListener('DOMContentLoaded', function () {
-            document.body.classList.add('loading');
-          
-            // Hide all sections while loading
-            document.querySelectorAll('.section').forEach(section => {
-              section.style.display = 'none';
-            });
-          });
+        // Start slideshow
+        showSlides();
 
-          window.addEventListener('scroll', function() {
-            const boxes = document.querySelectorAll('.box');
-            
-            boxes.forEach(function(box) {
-              const boxTop = box.getBoundingClientRect().top;
-              const scrollPosition = window.scrollY;
-          
-              // Adjust the background position based on scroll
-              box.style.backgroundPosition = `center ${-(scrollPosition * 0.5)}px`; // Adjust 0.5 to change speed
-            });
-          });
-          
-          
-    </script>
+    }, 3000); // Adjust delay here (3000 = 3 seconds)
+});
+
+/* ---------------------------
+   PARALLAX SCROLL EFFECT
+----------------------------*/
+window.addEventListener("scroll", () => {
+    const boxes = document.querySelectorAll(".box");
+
+    boxes.forEach(box => {
+        const scrollPos = window.scrollY;
+        box.style.backgroundPosition = `center ${-(scrollPos * 0.5)}px`;
+    });
+});
+</script>
+
 
     <script>
         const observer = new IntersectionObserver((entries) => {
