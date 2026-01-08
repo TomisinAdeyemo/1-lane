@@ -70,31 +70,44 @@ body {
    GOLD TEXT UNDER LOGO (NEW)
 ----------------------------------------- */
 .loader-text {
-                                                                        font-family: 'MicroMieps Phat', sans-serif;
-                                                
-  margin-top: 20px;           /* space under the logo */
-  font-size: 18px;
-  font-weight: 600;
+  font-family: 'MicroMieps Phat', sans-serif;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 500;
   text-align: center;
-  color: gold;
+  color: #d4af37; /* muted gold */
   opacity: 0;
 
-  animation: fadeInText 2s ease forwards,
-             goldGlow 2.5s infinite ease-in-out;
+  /* appears AFTER logo has started pulsing */
+  animation: fadeInText 1.2s ease forwards,
+             goldGlow 3s ease-in-out infinite;
+  animation-delay: 1.5s; /* key part */
 }
-
 /* Fade-in animation */
 @keyframes fadeInText {
-  from { opacity: 0; transform: translateY(10px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* Soft gold glowing effect */
+/* Subtle luxury glow (NOT neon) */
 @keyframes goldGlow {
-  0%   { text-shadow: 0 0 5px gold; }
-  50%  { text-shadow: 0 0 18px gold; }
-  100% { text-shadow: 0 0 5px gold; }
+  0% {
+    text-shadow: 0 0 2px rgba(212, 175, 55, 0.25);
+  }
+  50% {
+    text-shadow: 0 0 8px rgba(212, 175, 55, 0.45);
+  }
+  100% {
+    text-shadow: 0 0 2px rgba(212, 175, 55, 0.25);
+  }
 }
+
 
 
 
