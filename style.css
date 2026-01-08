@@ -1705,6 +1705,7 @@ font-family: 'Hind Siliguri', sans-serif;
   font-family: 'Inter', sans-serif;
   font-size: 2rem;
   margin-bottom: 30px;
+  text-transform: uppercase;
 }
 
 .song-content {
